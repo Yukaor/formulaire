@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <form onsubmit="return validateForm()" action="">
+      <label>Nom</label> : <input type="text" name="Nom" id="nom" />
+      <label>Prénom</label> : <input type="text" name="Prénom" id="prenom" />
+      <input type="submit" id="submit">
+    </form>
+    
+    <script type="text/javascript">
+    function validateForm()
+    {
+        var a=document.getElementById("nom").value;
+        var a=document.getElementById("prenom").value;
+        if (a==null || a=="" || b==null || b=="")
+        {
+            alert("On est pas bon là");
+            return false;
+        }
+    }
+</script>
+    
+</body>
+
+</html>
