@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <form onsubmit="return validateForm()" action="">
+      <label>Nom</label> : <input type="text" name="Nom" id="nom" />
+      <label>Prénom</label> : <input type="text" name="Prénom" id="prenom" />
+      <input type="submit" id="submit" disabled>
+    </form>
+    
+    <script type="text/javascript">
+        var allTextInputs = document.querySelectorAll("input[type=text]");
+        for (var i = 0; i < allTextInputs.length; i++) {
+            allTextInputs[i].addEventListener('keyup', function(e){
+                var nom = document.getElementById("nom").value;
+                var prenom = document.getElementById("prenom").value;
+                if(nom == "" || prenom == "")
+                    {
+                        document.getElementById("submit").disabled = true
+                    }
+                    else{
+                        document.getElementById("submit").disabled = false
+
+                    }
+
+                 });
+        }
+    </script>
+    
+</body>
+
+</html>
